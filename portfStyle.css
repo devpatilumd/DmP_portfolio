@@ -376,3 +376,40 @@ footer {
     height: 85px;
   }
 }
+
+/* ── SKILLS: formatted rows ── */
+.glass-card p, section p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  text-align: left;
+}
+
+.glass-card p strong, section p strong {
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+/* ── TWO COLUMN: Work Exp + Projects side by side ── */
+.experience-card,
+section.experience-card,
+section.projects-card {
+  width: calc(50% - 12px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* cleaner approach — wrap both in a flex row */
+body > .two-col-wrapper,
+main > .two-col-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
